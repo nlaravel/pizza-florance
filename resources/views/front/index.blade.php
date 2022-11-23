@@ -135,7 +135,11 @@
                                                             <h5>{{$product->name}}</h5>
                                                             <span>{{$product->price}} $</span>
                                                             <div class="main-p">
-                                                                @foreach($product->ingredients as $ingredient)
+                                                                <?php
+                                                                $ids=\DB::table('ingredient_product')->where('product_id',$product->id)->pluck('ingredient_id');
+                                                                $ingredients=\App\Ingredient::whereIn('id',$ids)->get();
+                                                                ?>
+                                                                @foreach($ingredients as $ingredient)
                                                                     <p>{{$ingredient->name}},</p>
                                                                 @endforeach
                                                             </div>

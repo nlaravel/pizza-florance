@@ -71,7 +71,7 @@ class ProductController extends Controller
             'description' => 'required',
             'category_id' => 'required',
            // 'day' => 'required',
-            'ingredient' => 'required',
+            //'ingredient' => 'required',
         ]);
 
 
@@ -206,7 +206,7 @@ class ProductController extends Controller
             'description'=>'required',
             'category_id'=>'required',
             // 'day'=>'required',
-            'ingredient'=>'required',
+           // 'ingredient'=>'required',
         ]);
         $extras= $request->extras;
         $sizes= $request->sizes;
@@ -247,7 +247,7 @@ class ProductController extends Controller
 //            $product->days()->sync($dayIds);
 //
 //        }
-        if($request->ingredient){
+        if($request->ingredients){
             $ingredientIds = [];
             foreach ($request->ingredient as $ingredient) {
                 if ($ingredient) {

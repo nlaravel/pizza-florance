@@ -100,7 +100,7 @@
                                                     {{--/>--}}
                                                     {{--</div>--}}
                                                     <div>
-                                                        <v-select  label="name" dir="ltr" v-model="ingredient" :options="ingredients" :dir="$vs.rtl ? 'rtl' : 'ltr'" multiple />
+                                                        <v-select  label="name" dir="ltr" v-model="ingredients" :options="ingredients" :dir="$vs.rtl ? 'rtl' : 'ltr'" multiple />
                                                     </div>
                                                     <span v-if="form.error && form.validations.ingredient" style="color: red">@{{ form.validations.ingredient[0] }}</span>
                                                 </div>

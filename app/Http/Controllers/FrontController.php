@@ -91,6 +91,7 @@ class FrontController extends Controller
 
         return view('front.build_your_pizza',compact('types','sizes','toppings'));
     }
+
     public function build_your_calzone()
     {
         $sizes=CalzoneSize::all();
